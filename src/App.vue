@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <the-header></the-header>
+      <card-info></card-info>
+      <gallry></gallry>
+      <comment></comment>
+      <contact></contact>
+      <the-footer></the-footer>
+    </div>
+    
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/layout/TheHeader.vue';
+import TheFooter from './components/layout/TheFooter.vue';
+import CardInfo from './components/CardInfo/CardInfo.vue';
+import Gallry from './components/Gallery/Gallery.vue';
+import Comment from './components/Comment/Comment.vue';
+import Contact from './components/Contact/Contact.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{TheHeader,CardInfo,Gallry,Comment,Contact,TheFooter}
 }
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+:root{
+  --perpel : #754EF9;
+  --white:#FFFFFF;
+  --black:#101010;
 }
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+button{
+  border: none;
+  outline: none; 
+  cursor: pointer;
+}
+
 </style>
